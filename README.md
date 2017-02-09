@@ -38,7 +38,7 @@ Installation
 > Make the file executable: `chmod -x upload.py`
 >
 >**Step 3**
-> Rename the file so we can get rid of the .py part. `mv upload.py upload
+> Rename the file so we can get rid of the .py part. `mv upload.py upload`
 >
 > **Step 4**
 > Create a folder to hold your personal scripts: `mkdir -p ~/bin`

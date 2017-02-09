@@ -37,7 +37,10 @@ Installation
 > **Step 2**
 > Make the file executable: `chmod -x upload.py`
 >
-> **Step 3**
+>**Step 3**
+> Rename the file so we can get rid of the .py part. `mv upload.py upload
+>
+> **Step 4**
 > Create a folder to hold your personal scripts: `mkdir -p ~/bin`
 > Copy upload.py to the newly created folder: `cp upload.py ~/.bin`
 > Add export `PATH=$PATH":$HOME/bin"` to your .profile or .bash_profile.

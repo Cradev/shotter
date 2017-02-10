@@ -6,6 +6,9 @@ import os
 import subprocess
 import requests
 
+API_TOKEN = "CHANGE ME"
+LINK = "LINK TO PHP FILE"
+
 def pbcopy(link_to_copy):
     ''' Copy the URL to the macOS clipboard. '''
     ps = subprocess.Popen(('echo', link_to_copy), stdout=subprocess.PIPE)
@@ -18,7 +21,7 @@ def upload(file):
         'file': open(file, 'rb')
     }
 
-    r = requests.post("http://scrn.me/uploader.php", data={'token': 'CHANGE ME'}, files=files)
+    r = requests.post(LINK, data={'token': API_TOKEN}, files=files)
 
     json_string = json.loads(r.text)
     pbcopy(json_string['public_url'])

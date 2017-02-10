@@ -6,8 +6,8 @@ import os
 import subprocess
 import requests
 
-API_TOKEN = "CHANGE ME"
-LINK = "LINK TO PHP FILE"
+API_TOKEN = "CHANGE ME" # The API token defined in uploader.php
+LINK = "LINK TO PHP FILE" # The link to the uploader.php file on your server e.g. http://example.com/uploader.php
 
 def pbcopy(link_to_copy):
     ''' Copy the URL to the macOS clipboard. '''

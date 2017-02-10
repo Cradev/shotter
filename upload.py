@@ -6,13 +6,13 @@ import subprocess
 import requests
 
 def pbcopy(link_to_copy):
-    # Copy the URL to the macOS clipboard.
+    ''' Copy the URL to the macOS clipboard. '''
     ps = subprocess.Popen(('echo', link_to_copy), stdout=subprocess.PIPE)
     output = subprocess.check_output(('pbcopy', 'process_name'), stdin=ps.stdout)
     ps.wait()
 
 def upload(file):
-    # Upload the image.
+    ''' Upload the image '''
     files = {
         'file': open(file, 'rb')
     }
@@ -29,7 +29,10 @@ def main():
     args = parser.parse_args()
     file = args.f
 
-    upload(file)
+    if not (file):
+        parser.error("Please specify a file.")
+    else:
+        upload(file)
 
 main()
 

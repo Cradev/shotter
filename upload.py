@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import subprocess
 import requests
 
@@ -17,20 +18,22 @@ def upload(file):
         'file': open(file, 'rb')
     }
 
-    r = requests.post("http://scrn.me/uploader.php", data={'token': 'change me'}, files=files)
+    r = requests.post("http://scrn.me/uploader.php", data={'token': 'CHANGE ME'}, files=files)
 
     json_string = json.loads(r.text)
     pbcopy(json_string['public_url'])
 
-
 def main():
     parser = argparse.ArgumentParser(description='Take file name')
-    parser.add_argument('-f', help='file path for the file to upload')
+    parser.add_argument('-f', help='file path for the file to upload', required=True)
+    parser.add_argument('-d', help='delete file after upload.', action="store_true")
     args = parser.parse_args()
     file = args.f
 
-    if not (file):
-        parser.error("Please specify a file.")
+    if args.d:
+        upload(file)
+        os.remove(file)
+
     else:
         upload(file)
 

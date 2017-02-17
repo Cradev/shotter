@@ -10,11 +10,10 @@ Since I'm an Apple geek it will currently only work on macOS.
 
 To do
 -------------
- > -  Make the command line arguments prettier/easier to use.
- > -  Create a GUI app or make the script watch certain folders for file changes and automatically upload.
+ > - Make the command line arguments prettier/easier to use.
+ > - Create a GUI app or make the script watch certain folders for file changes and automatically upload.
  > - By doing the above hopefully make the project easier to use for non-tech savy users.
  > - Add automatic copying of link to clip-board on linux too.
- > - Make the code more pretty and easier to add to/modify.
  > - More awesomeness.
 
 Installation
@@ -27,7 +26,7 @@ Installation
 >**Step 2**
 >Make sure apache/nginx has write access to the folder.
 
-**upload.py**
+**upload.rb // This is currently an ugly hack - proper instructions will follow. **
 > **Step 1**
 > Make sure the shebang `#!/usr/bin/env ruby` is added at the top of upload.rb.
 >

@@ -29,19 +29,19 @@ Installation
 
 **upload.py**
 > **Step 1**
-> Make sure the shebang `#!/usr/bin/env python3` is added at the top of upload.py.
+> Make sure the shebang `#!/usr/bin/env ruby` is added at the top of upload.rb.
 >
 > **Step 2**
 > Create a folder to hold your personal executables. `mkdir -p ~/bin`. If you already have a preferred folder for this, you can skip this step.
 >
 >**Step 3**
-> Copy upload.py either to ~/bin or to your preferred folder.
+> Copy upload.rb, uploader.rb and config.yaml either to ~/bin or to your preferred folder.
 >
 >**Step 4**
-> Make upload.py executable `chmod +x upload.py`.
-> 
+> Make upload.rb executable `chmod +x upload.rb`.
+>
 > **Step 5**
-> Rename the file so we can get rid of the .py part. `mv upload.py upload`
+> Rename the file so we can get rid of the .rb part. `mv upload.rb upload`
 >
 > **Step 6**
 > Add `export PATH=$PATH":$HOME/bin"` to your .profile or .bash_profile file.
@@ -52,5 +52,6 @@ Usage
 -------------
 
 > **Command(s)**
-> *upload -f [path-to-file]*
+> *upload -d -f [path-to-file]*
+> *-d or --delete will delete the file after upload*
 

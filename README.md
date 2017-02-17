@@ -26,7 +26,7 @@ Installation
 >**Step 2**
 >Make sure apache/nginx has write access to the folder.
 
-**upload.rb // This is currently an ugly hack - proper instructions will follow. **
+**upload.rb This is currently an ugly hack proper instructions will follow. **
 > **Step 1**
 > Make sure the shebang `#!/usr/bin/env ruby` is added at the top of upload.rb.
 >
